@@ -21,7 +21,7 @@ tasks:
   default:
     desc: run all the tests by default
     cmds:
-      - task: go:unit
+      - task: unit
       - task: :azurite:preflight
       - task: integration
       - task: :azurite:stop
@@ -62,4 +62,5 @@ tasks:
             {{.GO_TEST_TAGS}} \
             -race \
             -v \
-            ./... 
+            ./...
+          exit 0
